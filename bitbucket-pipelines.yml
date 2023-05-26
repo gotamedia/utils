@@ -1,6 +1,4 @@
-image:
-  name: atlassian/default-image:4
-  run-as-user: 1000
+image: atlassian/default-image:4
 
 definitions:
   steps:
