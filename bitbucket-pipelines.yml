@@ -16,7 +16,7 @@ definitions:
         script:
           - npm run release
           - npm run finalize-package
-          - git push --follow-tags origin main
+          - git push --follow-tags origin master
 
     - step: &publish
         name: publish
