@@ -4,9 +4,6 @@
     "description": "Set of AWS helpers for NodeJs Runtime.",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
-    "files": [
-        "lib/**/*"
-    ],
     "keywords": [
         "Gota",
         "Gota Media",
