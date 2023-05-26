@@ -3,8 +3,8 @@
     "version": "0.0.1",
     "private": false,
     "description": "Set of Utils helper for NodeJs Runtime.",
-    "main": "lib/index.js",
-    "types": "lib/index.d.ts",
+    "main": "index.js",
+    "types": "index.d.ts",
     "keywords": [
         "Gota",
         "Gota Media",
