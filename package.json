@@ -15,7 +15,7 @@
     "scripts": {
         "build": "tsc",
         "test": "echo 'No tests'",
-        "release": "commit-and-tag-version --tag-prefix=''",
+        "release": "npx commit-and-tag-version --tag-prefix=''",
         "finalize-package": "./scripts/finalize-package.sh"
     },
     "license": "MIT",
