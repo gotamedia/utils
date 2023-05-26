@@ -24,11 +24,11 @@ definitions:
         name: publish
         deployment: production
         script:
-          - ls -la ./lib
-          # - pipe: atlassian/npm-publish:0.3.3
-          #   variables:
-          #     NPM_TOKEN: ${NPM_TOKEN}
-          #     FOLDER: "lib"
+          - pipe: atlassian/npm-publish:0.3.3
+            variables:
+              NPM_TOKEN: ${NPM_TOKEN}
+              FOLDER: "lib"
+              EXTRA_ARGS: "access=public"
 
 pipelines:
   branches:
