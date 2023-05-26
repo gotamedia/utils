@@ -1,14 +1,14 @@
 {
-    "name": "@gotamedia/aws",
-    "version": "0.0.4",
+    "name": "@gotamedia/utils",
+    "version": "0.0.0",
     "private": false,
-    "description": "Set of AWS helpers for NodeJs Runtime.",
+    "description": "Set of Utils helper for NodeJs Runtime.",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
     "keywords": [
         "Gota",
         "Gota Media",
-        "AWS"
+        "Utils"
     ],
     "scripts": {
         "build": "tsc",
@@ -19,10 +19,11 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://bitbucket.org/gotamedia/aws.git"
+        "url": "https://bitbucket.org/gotamedia/utils.git"
     },
-    "homepage": "https://bitbucket.org/gotamedia/aws#readme",
+    "homepage": "https://bitbucket.org/gotamedia/utils#readme",
     "devDependencies": {
+        "source-map-support": "^0.5.21",
         "typescript": "^5.0.4"
     }
 }

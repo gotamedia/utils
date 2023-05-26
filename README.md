@@ -1,3 +1,3 @@
-# Gota Media AWS
+# Gota Media Utils
 
-Set of AWS helpers for NodeJs Runtime.
+Set of Utils helpers for NodeJs Runtime.
