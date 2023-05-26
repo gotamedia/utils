@@ -1,5 +1,5 @@
 image:
-  name: atlassian/default-image:3
+  name: atlassian/default-image:4
   run-as-user: 1000
 
 definitions:
@@ -7,6 +7,8 @@ definitions:
     - step: &release
         name: release
         script:
+          - node -v
+          - npm -v
           - npm install -g standard-version
           - git config --global --add safe.directory /opt/atlassian/pipelines/agent/build
           - git fetch --unshallow
