@@ -28,7 +28,7 @@ definitions:
             variables:
               NPM_TOKEN: ${NPM_TOKEN}
               FOLDER: "lib"
-              EXTRA_ARGS: "access=public"
+              EXTRA_ARGS: "--access public"
 
 pipelines:
   branches:
