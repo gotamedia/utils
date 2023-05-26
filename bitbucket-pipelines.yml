@@ -7,7 +7,6 @@ definitions:
     - step: &release
         name: release
         script:
-          - npm install -g standard-version
           - git config --global --add safe.directory /opt/atlassian/pipelines/agent/build
           - git fetch --unshallow
           - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
