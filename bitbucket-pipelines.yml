@@ -1,0 +1,47 @@
+image:
+  name: atlassian/default-image:3
+  run-as-user: 1000
+
+definitions:
+  steps:
+    - step: &release
+        name: release
+        script:
+          - npm install -g standard-version
+          - git config --global --add safe.directory /opt/atlassian/pipelines/agent/build
+          - git fetch --unshallow
+          - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+          - git fetch origin
+          - git checkout --track origin/main
+          - git merge origin/master
+          - npm run release
+          - git push --follow-tags origin main
+
+    - step: &build
+        name: build
+        script:
+          - npm install
+          - npm run test
+          - npm run build
+          - npm run finalize-package
+        artifacts:
+            - lib/**
+    
+    - step: &publish
+        name: publish
+        deployment: production
+        script:
+          - pipe: atlassian/npm-publish:0.3.3
+            variables:
+              NPM_TOKEN: ${NPM_TOKEN}
+              FOLDER: "lib"
+
+pipelines:
+  branches:
+    master:
+      - step: *release
+
+  tags:
+    "*.*.*":
+      - step: *build
+      - step: *publish

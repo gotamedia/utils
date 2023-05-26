@@ -1,0 +1,30 @@
+{
+    "name": "@gotamedia/aws",
+    "version": "0.0.0",
+    "description": "Set of AWS helpers for NodeJs Runtime.",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "files": [
+        "lib/**/*"
+    ],
+    "keywords": [
+        "Gota",
+        "Gota Media",
+        "AWS"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "test": "echo 'No tests'",
+        "release": "commit-and-tag-version --tag-prefix=''",
+        "finalize-package": "./scripts/finalize-package.sh"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://bitbucket.org/gotamedia/aws.git"
+    },
+    "homepage": "https://bitbucket.org/gotamedia/aws#readme",
+    "devDependencies": {
+        "typescript": "^5.0.4"
+    }
+}
