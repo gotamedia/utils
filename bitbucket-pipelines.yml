@@ -5,12 +5,10 @@ definitions:
     - step: &release
         name: release
         script:
-          - node -v
-          - npm -v
           - npm install -g standard-version
-          - git config --global --add safe.directory /opt/atlassian/pipelines/agent/build
-          - git fetch --unshallow
-          - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+          # - git config --global --add safe.directory /opt/atlassian/pipelines/agent/build
+          # - git fetch --unshallow
+          # - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
           - git fetch origin
           - git checkout --track origin/main
           - git merge origin/master
