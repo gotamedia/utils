@@ -1,4 +1,4 @@
-import getErrorTrace from "./getErrorTrace.js"
+import { getErrorTrace } from "./getErrorTrace.js"
 
 type LogData = {
     info?: any,
@@ -31,4 +31,6 @@ const logError = (error: Error, additionalInfo: any) => {
     console.error(JSON.stringify(logData, null, 4))
 }
 
-export default logError
+export {
+    logError
+}

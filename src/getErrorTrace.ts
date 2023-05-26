@@ -8,4 +8,6 @@ const getErrorTrace = (error: Error) => {
         .slice(1)
 }
 
-export default getErrorTrace
+export {
+    getErrorTrace
+}
