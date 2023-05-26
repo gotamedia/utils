@@ -1,4 +1,6 @@
-image: atlassian/default-image:4
+image:
+  name: gotamedia/aws-cli:latest
+  run-as-user: 1000
 
 definitions:
   steps:
@@ -6,9 +8,9 @@ definitions:
         name: release
         script:
           - npm install -g standard-version
-          # - git config --global --add safe.directory /opt/atlassian/pipelines/agent/build
-          # - git fetch --unshallow
-          # - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+          - git config --global --add safe.directory /opt/atlassian/pipelines/agent/build
+          - git fetch --unshallow
+          - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
           - git fetch origin
           - git checkout --track origin/main
           - git merge origin/master
