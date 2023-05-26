@@ -1,6 +1,6 @@
 {
     "name": "@gotamedia/utils",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "private": false,
     "description": "Set of Utils helper for NodeJs Runtime.",
     "main": "lib/index.js",
