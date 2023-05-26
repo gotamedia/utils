@@ -17,6 +17,8 @@ definitions:
           - npm run release
           - npm run finalize-package
           - git push --follow-tags origin master
+        artifacts:
+            - lib/**
 
     - step: &publish
         name: publish
