@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.1.0](https://bitbucket.org/gotamedia/utils/compare/0.1.0..0.0.3) (2023-05-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* Introduced @gotamedia/utils package.
+
+### Features
+
+* Introduced @gotamedia/utils package. ([d94fd96](https://bitbucket.org/gotamedia/utils/commits/d94fd96d2c485cfbdc774460133acb65fff104c7))
+
 ## [0.0.3](https://bitbucket.org/gotamedia/utils/compare/0.0.3..0.0.2) (2023-05-26)
 
 
