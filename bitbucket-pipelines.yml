@@ -2,31 +2,24 @@ image: atlassian/default-image:4
 
 definitions:
   steps:
-    - step: &release
-        name: release
-        script:
-          - node -v
-          - npm -v
-          - npm install -g standard-version
-          - git config --global --add safe.directory /opt/atlassian/pipelines/agent/build
-          - git fetch --unshallow
-          - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
-          - git fetch origin
-          - git checkout --track origin/main
-          - git merge origin/master
-          - npm run release
-          - git push --follow-tags origin main
-
     - step: &build
         name: build
         script:
           - npm install
           - npm run test
           - npm run build
-          - npm run finalize-package
         artifacts:
             - lib/**
-    
+
+    - step: &release
+        name: release
+        script:
+          - npm run release
+          - npm run finalize-package
+          - git push --follow-tags origin master
+        artifacts:
+            - lib/**
+
     - step: &publish
         name: publish
         deployment: production
@@ -35,13 +28,11 @@ definitions:
             variables:
               NPM_TOKEN: ${NPM_TOKEN}
               FOLDER: "lib"
+              EXTRA_ARGS: "--access public"
 
 pipelines:
   branches:
     master:
-      - step: *release
-
-  tags:
-    "*.*.*":
       - step: *build
+      - step: *release
       - step: *publish

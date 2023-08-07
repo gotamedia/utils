@@ -1,7 +1,2 @@
-const logger = (name: string) => {
-    console.log(name)
-}
-
-export {
-    logger
-}
+export * from "./getErrorTrace"
+export * from "./logError"
